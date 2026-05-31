@@ -1,0 +1,3 @@
+[console_scripts]
+turtlebot_movement = turtlebot_maze_solver.obstacle:main
+
