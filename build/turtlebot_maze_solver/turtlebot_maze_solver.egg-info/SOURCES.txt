@@ -4,6 +4,7 @@ setup.py
 resource/turtlebot_maze_solver
 turtlebot_maze_solver/__init__.py
 turtlebot_maze_solver/obstacle.py
+turtlebot_maze_solver/wall_follower.py
 turtlebot_maze_solver.egg-info/PKG-INFO
 turtlebot_maze_solver.egg-info/SOURCES.txt
 turtlebot_maze_solver.egg-info/dependency_links.txt
