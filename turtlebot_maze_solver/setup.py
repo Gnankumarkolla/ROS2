@@ -25,7 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             "turtlebot_movement=turtlebot_maze_solver.obstacle:main",
-            "wall_follower=turtlebot_maze_solver.wall_follower:main"
+            "wall_follower=turtlebot_maze_solver.wall_follower:main",
+            "waypoint_navigator=turtlebot_maze_solver.send_goal:main",
         ],
     },
 )

@@ -1,9 +1,0 @@
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/uninstall.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/turtlebot_maze_solver_uninstall.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/test.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/edit_cache.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/rebuild_cache.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/list_install_components.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/install.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/install/local.dir
-/home/gnan/janu_ws/src/build/turtlebot_maze_solver/CMakeFiles/install/strip.dir

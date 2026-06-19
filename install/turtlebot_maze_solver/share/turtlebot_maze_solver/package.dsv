@@ -1,8 +1,9 @@
-source;share/turtlebot_maze_solver/hook/cmake_prefix_path.ps1
-source;share/turtlebot_maze_solver/hook/cmake_prefix_path.dsv
-source;share/turtlebot_maze_solver/hook/cmake_prefix_path.sh
-source;share/turtlebot_maze_solver/local_setup.bash
-source;share/turtlebot_maze_solver/local_setup.dsv
-source;share/turtlebot_maze_solver/local_setup.ps1
-source;share/turtlebot_maze_solver/local_setup.sh
-source;share/turtlebot_maze_solver/local_setup.zsh
+source;share/turtlebot_maze_solver/hook/pythonpath.ps1
+source;share/turtlebot_maze_solver/hook/pythonpath.dsv
+source;share/turtlebot_maze_solver/hook/pythonpath.sh
+source;share/turtlebot_maze_solver/hook/ament_prefix_path.ps1
+source;share/turtlebot_maze_solver/hook/ament_prefix_path.dsv
+source;share/turtlebot_maze_solver/hook/ament_prefix_path.sh
+source;../../build/turtlebot_maze_solver/share/turtlebot_maze_solver/hook/pythonpath_develop.ps1
+source;../../build/turtlebot_maze_solver/share/turtlebot_maze_solver/hook/pythonpath_develop.dsv
+source;../../build/turtlebot_maze_solver/share/turtlebot_maze_solver/hook/pythonpath_develop.sh
