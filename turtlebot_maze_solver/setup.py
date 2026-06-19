@@ -27,6 +27,7 @@ setup(
             "turtlebot_movement=turtlebot_maze_solver.obstacle:main",
             "wall_follower=turtlebot_maze_solver.wall_follower:main",
             "waypoint_navigator=turtlebot_maze_solver.send_goal:main",
+            "voice_controller=turtlebot_maze_solver.voice_controll_robot:main",
         ],
     },
 )

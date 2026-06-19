@@ -1,4 +1,4 @@
-#! usr/bin/env python3
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
@@ -44,8 +44,8 @@ class GoalSender(Node):
         self.get_logger().info(f"error= {result.status}")
         self.current_waypoint+=1
         self.send_goal()
-def main():
-    rclpy.init()
+def main(args=None):
+    rclpy.init(args=args)
     node=GoalSender()
     rclpy.spin(node)
     rclpy.shutdown()
