@@ -10,6 +10,7 @@ Tools:
 =>Gazebo
 =>RVIZ2
 =>TurtleBot3
+=>SpeechRecognition
 
 Workflow
-Wall Following-> SLAM -> Map Save -> Localization ->NAV2
+Wall Following-> SLAM -> Map Save -> Localization ->NAV2->Waypoint navigator->voice contol robot 
