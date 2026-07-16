@@ -5,6 +5,7 @@ resource/turtlebot_maze_solver
 turtlebot_maze_solver/__init__.py
 turtlebot_maze_solver/obstacle.py
 turtlebot_maze_solver/send_goal.py
+turtlebot_maze_solver/voice_controll_robot.py
 turtlebot_maze_solver/wall_follower.py
 turtlebot_maze_solver.egg-info/PKG-INFO
 turtlebot_maze_solver.egg-info/SOURCES.txt
