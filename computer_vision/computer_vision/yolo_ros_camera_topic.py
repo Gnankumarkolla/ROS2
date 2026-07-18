@@ -9,28 +9,20 @@ from cv_bridge import CvBridge
 from sensor_msgs.msg import Image
 
     
-class YOlO_ros2(Node):
+class CameraSubscriber(Node):
     def __init__(self):
-        super().__init__("yolo_ros_integration")
+        super().__init__("camera_subscriber")
         self.model=YOLO("yolo26n.pt")
-        self.cap=cv2.VideoCapture(1)
         self.bridge=CvBridge()
         
-        self.imgmsg_publisher=self.create_publisher(Image,"/camera/image_raw",10)
+        self.imgmsg_subscriber=self.create_subscription(Image,"/camera/image_raw",self.pic_callback,10)
         self.publisher=self.create_publisher(String,"/detected_object",10)
         self.cmd_publisher=self.create_publisher(Twist,"/cmd_vel",10)
-        self.create_timer(0.03,self.pic_callback)
+        
 
-    def pic_callback(self):
+    def pic_callback(self,msg):
             
-            success,img=self.cap.read()
-            if cv2.waitKey(1) & 0xFF ==ord('q'):
-              self.cap.release()
-              cv2.destroyAllWindows()
-              rclpy.shutdown()
-              return
-            msg1=self.bridge.cv2_to_imgmsg(img,"bgr8")
-
+            img=self.bridge.imgmsg_to_cv2(msg,"bgr8")
             label=None
             result=self.model(img)
             for box in result[0].boxes:
@@ -38,30 +30,30 @@ class YOlO_ros2(Node):
                 label=self.model.names[cls]
             ann=result[0].plot()
             cv2.imshow("video",ann)
+            cv2.waitKey(1)
 
             if not label==None:
-                msg=String()
-                msg.data=label
-                self.get_logger().info(msg.data)
+                object_msg=String()
+                object_msg.data=label
                 cmd=Twist()
-                if msg.data=="bottle":
+                if object_msg.data=="bottle":
                     cmd.linear.x=0.0
                     cmd.angular.z=0.0
-                elif msg.data=="person":
+                elif object_msg.data=="person":
                     cmd.linear.x=0.5
                     cmd.angular.z=0.0
                 else :
                     cmd.linear.x=0.0
                     cmd.angular.z=0.02
-                self.imgmsg_publisher.publish(msg1)
+                
                 self.cmd_publisher.publish(cmd)
-                self.publisher.publish(msg)
+                self.publisher.publish(object_msg)
 cv2.destroyAllWindows()            
 
 
 def main(args=None):
     rclpy.init(args=args)
-    node=YOlO_ros2()
+    node=CameraSubscriber()
     rclpy.spin(node)
     rclpy.shutdown()
 if __name__=='__main__':
