@@ -1,1 +1,0 @@
-/home/gnan/janu_ws/src/my_robot_controller/setup.py

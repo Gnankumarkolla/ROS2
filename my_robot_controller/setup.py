@@ -28,6 +28,8 @@ setup(
             "draw_circle=my_robot_controller.draw_circle:main",
             "pose_subscriber=my_robot_controller.pose_subscriber:main",
             "turtle_controller=my_robot_controller.turtle_controller:main",
+            "add_two_ints_server=my_robot_controller.add_two_ints_service:main",
+            "add_two_ints_client=my_robot_controller.add_two_ints_client:main",
         ],
     },
 )

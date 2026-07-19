@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             "yoloros=computer_vision.yolo_ros2_integration:main",
             "camsub=computer_vision.yolo_ros_camera_topic:main",
+            
         ],
     },
 )
