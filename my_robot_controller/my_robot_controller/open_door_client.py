@@ -11,7 +11,7 @@ class OpenDoorClient(Node):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info(">>>waiting for server...")
         self.request=OpenDoor.Request()
-        a=int(input("enter 1 for true and 0 for false: "))
+        a=1
         if a==1:
             self.request.open=True
         else:
