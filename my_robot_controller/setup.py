@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os 
+from glob import glob
 
 package_name = 'my_robot_controller'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share',package_name,'launch'),glob('launch/*.launch.py')),
+        
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -30,6 +34,8 @@ setup(
             "turtle_controller=my_robot_controller.turtle_controller:main",
             "add_two_ints_server=my_robot_controller.add_two_ints_service:main",
             "add_two_ints_client=my_robot_controller.add_two_ints_client:main",
+            "op_door_server=my_robot_controller.open_door_service:main",
+            "op_door_client=my_robot_controller.open_door_client:main",
         ],
     },
 )

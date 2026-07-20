@@ -2,6 +2,8 @@
 add_two_ints_client = my_robot_controller.add_two_ints_client:main
 add_two_ints_server = my_robot_controller.add_two_ints_service:main
 draw_circle = my_robot_controller.draw_circle:main
+op_door_client = my_robot_controller.open_door_client:main
+op_door_server = my_robot_controller.open_door_service:main
 pose_subscriber = my_robot_controller.pose_subscriber:main
 test_node = my_robot_controller.my_first_node:main
 turtle_controller = my_robot_controller.turtle_controller:main
