@@ -36,6 +36,8 @@ setup(
             "add_two_ints_client=my_robot_controller.add_two_ints_client:main",
             "op_door_server=my_robot_controller.open_door_service:main",
             "op_door_client=my_robot_controller.open_door_client:main",
+            "mv_rob_ser=my_robot_controller.move_robot_action_server:main",
+            "mv_rob_cli=my_robot_controller.move_robot_action_client:main",
         ],
     },
 )

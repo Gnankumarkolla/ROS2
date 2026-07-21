@@ -1,0 +1,6 @@
+float32 distance
+---
+bool success
+string message
+---
+float32 percentage_completed
